@@ -11,14 +11,7 @@
 package cpw.mods.ironchest.common.blocks.chest;
 
 import cpw.mods.ironchest.common.gui.chest.slot.ValidatingChestSlot;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityCopperChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityCrystalChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityDiamondChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityDirtChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityGoldChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityIronChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityObsidianChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntitySilverChest;
+import cpw.mods.ironchest.common.tileentity.chest.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -39,7 +32,8 @@ public enum IronChestType implements IStringSerializable
     CRYSTAL(108, 12, true, "crystal_chest.png", TileEntityCrystalChest.class, 238, 256),
     OBSIDIAN(108, 12, false, "obsidian_chest.png", TileEntityObsidianChest.class, 238, 256),
     DIRTCHEST9000(1, 1, false, "dirt_chest.png", TileEntityDirtChest.class, 184, 184),
-    WOOD(0, 0, false, "", null, 0, 0);
+    WOOD(0, 0, false, "", null, 0, 0),
+    NETHERITE(192,12,false,"netherite_chest.png",TileEntityNetheriteChest.class,238,382);
     //@formatter:on
 
     public static final IronChestType VALUES[] = values();
@@ -80,27 +74,30 @@ public enum IronChestType implements IStringSerializable
     {
         if (this.breakTexture == null)
         {
-            switch (this)
-            {
-            case DIRTCHEST9000:
-            {
-                this.breakTexture = "minecraft:blocks/dirt";
-                break;
-            }
-            case OBSIDIAN:
-            {
-                this.breakTexture = "minecraft:blocks/obsidian";
-                break;
-            }
-            case WOOD:
-            {
-                this.breakTexture = "minecraft:blocks/planks_oak";
-                break;
-            }
-            default:
-            {
-                this.breakTexture = "ironchest:blocks/" + this.getName() + "break";
-            }
+            switch (this) {
+                case NETHERITE:
+                {
+                    this.breakTexture = "minecraft:blocks/obsidian";
+                }
+                case DIRTCHEST9000:
+                {
+                    this.breakTexture = "minecraft:blocks/dirt";
+                    break;
+                }
+                case OBSIDIAN:
+                {
+                    this.breakTexture = "minecraft:blocks/obsidian";
+                    break;
+                }
+                case WOOD:
+                {
+                    this.breakTexture = "minecraft:blocks/planks_oak";
+                    break;
+                }
+                default:
+                {
+                    this.breakTexture = "ironchest:blocks/" + this.getName() + "break";
+                }
             }
         }
 
@@ -178,6 +175,8 @@ public enum IronChestType implements IStringSerializable
             return new TileEntityObsidianChest();
         case DIRTCHEST9000:
             return new TileEntityDirtChest();
+        case NETHERITE:
+            return new TileEntityNetheriteChest();
         default:
             return null;
         }

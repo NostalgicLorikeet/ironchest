@@ -39,13 +39,13 @@ public class ItemTooltip extends Item
 
     public static void addOptionalTooltip(ItemStack stack, List<String> tooltip)
     {
-        if (I18n.canTranslate(stack.getUnlocalizedName() + ".tooltip"))
+        if (I18n.canTranslate(stack.getTranslationKey() + ".tooltip"))
         {
-            tooltip.addAll(getTooltips(TextFormatting.GRAY.toString() + translateRecursive(stack.getUnlocalizedName() + ".tooltip")));
+            tooltip.addAll(getTooltips(TextFormatting.GRAY.toString() + translateRecursive(stack.getTranslationKey() + ".tooltip")));
         }
-        else if (I18n.canTranslate(stack.getUnlocalizedName() + ".tooltip"))
+        else if (I18n.canTranslate(stack.getTranslationKey() + ".tooltip"))
         {
-            tooltip.addAll(getTooltips(TextFormatting.GRAY.toString() + translateRecursive(stack.getUnlocalizedName() + ".tooltip")));
+            tooltip.addAll(getTooltips(TextFormatting.GRAY.toString() + translateRecursive(stack.getTranslationKey() + ".tooltip")));
         }
     }
 

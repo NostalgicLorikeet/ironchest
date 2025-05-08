@@ -65,7 +65,7 @@ public class BlockIronShulkerBox extends Block
 
         this.color = colorIn;
         this.setRegistryName(nameIn);
-        this.setUnlocalizedName("IronShulkerBox" + colorIn.getName());
+        this.setTranslationKey("IronShulkerBox" + colorIn.getName());
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT_PROP, IronShulkerBoxType.IRON));
         this.setHardness(3.0F);
         this.setCreativeTab(IronChestCreativeTabs.tabIronChests);
@@ -133,7 +133,7 @@ public class BlockIronShulkerBox extends Block
                 if (((TileEntityIronShulkerBox) tileentity).getAnimationStatus() == TileEntityIronShulkerBox.AnimationStatus.CLOSED)
                 {
                     //@formatter:off
-                    AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB.expand(0.5F * enumfacing.getFrontOffsetX(), 0.5F * enumfacing.getFrontOffsetY(), 0.5F * enumfacing.getFrontOffsetZ()).contract(enumfacing.getFrontOffsetX(), enumfacing.getFrontOffsetY(), enumfacing.getFrontOffsetZ());
+                    AxisAlignedBB axisalignedbb = FULL_BLOCK_AABB.expand(0.5F * enumfacing.getXOffset(), 0.5F * enumfacing.getYOffset(), 0.5F * enumfacing.getZOffset()).contract(enumfacing.getXOffset(), enumfacing.getYOffset(), enumfacing.getZOffset());
                     //@formatter:on
 
                     flag = !worldIn.collidesWithAnyBlock(axisalignedbb.offset(pos.offset(enumfacing)));
@@ -386,7 +386,7 @@ public class BlockIronShulkerBox extends Block
                 tooltip.add("???????");
             }
 
-            if (nbttagcompound1.hasKey("Items", 9))
+            if (nbttagcompound1.hasKey("Items", 8))
             {
                 if (nbttagcompound1.hasKey("ShulkerBoxSize", 3))
                 {
@@ -448,7 +448,7 @@ public class BlockIronShulkerBox extends Block
         }
     }
 
-    @Override
+    //@Override
     public EnumPushReaction getMobilityFlag(IBlockState state)
     {
         return EnumPushReaction.DESTROY;
@@ -481,7 +481,7 @@ public class BlockIronShulkerBox extends Block
         TileEntityIronShulkerBox tileentityironshulkerbox = (TileEntityIronShulkerBox) worldIn.getTileEntity(pos);
         NBTTagCompound nbttagcompound = tileentityironshulkerbox.saveToNbt(new NBTTagCompound());
 
-        if (!nbttagcompound.hasNoTags())
+        if (!nbttagcompound.isEmpty())
         {
             itemstack.setTagInfo("BlockEntityTag", nbttagcompound);
         }

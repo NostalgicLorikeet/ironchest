@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " M ",
+    "MSM",
+    " M "
+  ],
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNetherite"
+    },
+    "S": {
+      "item": "#DIAMOND"
+    }
+  },
+  "result": {
+    "item": "ironchest:diamond_netherite_chest_upgrade",
+  }
+}

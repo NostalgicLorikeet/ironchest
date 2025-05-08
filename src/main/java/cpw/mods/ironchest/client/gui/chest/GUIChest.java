@@ -29,7 +29,8 @@ public class GUIChest extends GuiContainer
         SILVER(new ResourceLocation("ironchest", "textures/gui/silver_container.png")),
         GOLD(new ResourceLocation("ironchest", "textures/gui/gold_container.png")),
         DIAMOND(new ResourceLocation("ironchest", "textures/gui/diamond_container.png")),
-        DIRT(new ResourceLocation("ironchest", "textures/gui/dirt_container.png"));
+        DIRT(new ResourceLocation("ironchest", "textures/gui/dirt_container.png")),
+        NETHERITE(new ResourceLocation("ironchest", "textures/gui/netherite_container.png")); //CHANGE
         //@formatter:on
         public final ResourceLocation location;
 
@@ -49,7 +50,9 @@ public class GUIChest extends GuiContainer
         SILVER(184, 238, ResourceList.SILVER, IronChestType.SILVER),
         CRYSTAL(238, 256, ResourceList.DIAMOND, IronChestType.CRYSTAL),
         OBSIDIAN(238, 256, ResourceList.DIAMOND,IronChestType.OBSIDIAN),
-        DIRTCHEST9000(184, 184, ResourceList.DIRT, IronChestType.DIRTCHEST9000);
+        DIRTCHEST9000(184, 184, ResourceList.DIRT, IronChestType.DIRTCHEST9000),
+        WOOD(0, 0, null, null),
+        NETHERITE(238, 382, ResourceList.NETHERITE, IronChestType.NETHERITE);
         //@formatter:on
 
         private int xSize;
@@ -114,6 +117,10 @@ public class GUIChest extends GuiContainer
         int x = (this.width - this.xSize) / 2;
         int y = (this.height - this.ySize) / 2;
 
-        this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
+        if (this.type != GUI.NETHERITE) {
+            this.drawTexturedModalRect(x, y,0, 0, this.xSize, this.ySize);
+        } else {
+            this.drawModalRectWithCustomSizedTexture(x, y, 0, 0, this.xSize, this.ySize, 256, 382);
+        }
     }
 }

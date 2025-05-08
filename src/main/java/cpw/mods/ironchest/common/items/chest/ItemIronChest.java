@@ -35,7 +35,7 @@ public class ItemIronChest extends ItemBlock
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack itemstack)
+    public String getTranslationKey(ItemStack itemstack)
     {
         int meta = itemstack.getMetadata();
 
@@ -45,7 +45,7 @@ public class ItemIronChest extends ItemBlock
         }
         else
         {
-            return super.getUnlocalizedName(itemstack);
+            return super.getTranslationKey(itemstack);
         }
     }
 }

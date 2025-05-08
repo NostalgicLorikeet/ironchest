@@ -17,6 +17,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.translation.I18n;
+import org.jetbrains.annotations.NotNull;
 
 public class ItemIronShulkerBox extends ItemBlock
 {
@@ -40,7 +42,7 @@ public class ItemIronShulkerBox extends ItemBlock
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack itemstack)
+    public String getTranslationKey(ItemStack itemstack)
     {
         int meta = itemstack.getMetadata();
 
@@ -50,7 +52,7 @@ public class ItemIronShulkerBox extends ItemBlock
         }
         else
         {
-            return super.getUnlocalizedName(itemstack);
+            return super.getTranslationKey(itemstack);
         }
     }
 }

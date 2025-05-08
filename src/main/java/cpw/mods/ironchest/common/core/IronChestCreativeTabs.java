@@ -19,10 +19,10 @@ public final class IronChestCreativeTabs
 
     public static final CreativeTabs tabIronChests = new CreativeTabs("ironchest")
     {
-        @Override
         @Nonnull
         @SideOnly(Side.CLIENT)
-        public ItemStack getTabIconItem()
+        @Override
+        public ItemStack createIcon()
         {
             return new ItemStack(Item.getItemFromBlock(IronChestBlocks.ironChestBlock), 1, IronChestType.IRON.ordinal());
         }

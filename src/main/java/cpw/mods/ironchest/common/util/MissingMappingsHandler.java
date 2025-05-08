@@ -28,7 +28,7 @@ public class MissingMappingsHandler
         for (Mapping<Block> entry : event.getAllMappings())
         {
             @Nonnull
-            String path = entry.key.getResourcePath();
+            String path = entry.key.getPath();
 
             replaceOldChestBlock(path, entry);
         }
@@ -40,7 +40,7 @@ public class MissingMappingsHandler
         for (Mapping<Item> entry : event.getAllMappings())
         {
             @Nonnull
-            String path = entry.key.getResourcePath();
+            String path = entry.key.getPath();
 
             replaceOldChestItem(path, entry);
 
@@ -55,7 +55,7 @@ public class MissingMappingsHandler
         if (path.endsWith("blockironchest"))
         {
             path = path.replace("blockironchest", "iron_chest");
-            ResourceLocation newRes = new ResourceLocation(mapping.key.getResourceDomain(), path);
+            ResourceLocation newRes = new ResourceLocation(mapping.key.getNamespace(), path);
             Block block = ForgeRegistries.BLOCKS.getValue(newRes);
 
             if (block != null)
@@ -70,7 +70,7 @@ public class MissingMappingsHandler
         if (path.endsWith("blockironchest"))
         {
             path = path.replace("blockironchest", "iron_chest");
-            ResourceLocation newRes = new ResourceLocation(mapping.key.getResourceDomain(), path);
+            ResourceLocation newRes = new ResourceLocation(mapping.key.getNamespace(), path);
             Item item = ForgeRegistries.ITEMS.getValue(newRes);
 
             if (item != null)
@@ -196,7 +196,7 @@ public class MissingMappingsHandler
 
     private static void replaceUpgradeItem(String path, Mapping<Item> mapping)
     {
-        ResourceLocation newRes = new ResourceLocation(mapping.key.getResourceDomain(), path);
+        ResourceLocation newRes = new ResourceLocation(mapping.key.getNamespace(), path);
         Item item = ForgeRegistries.ITEMS.getValue(newRes);
 
         if (item != null)

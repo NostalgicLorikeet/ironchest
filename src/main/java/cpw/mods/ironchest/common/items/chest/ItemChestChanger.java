@@ -40,7 +40,7 @@ public class ItemChestChanger extends ItemTooltip
     {
         this.type = type;
         this.setMaxStackSize(1);
-        this.setUnlocalizedName("ironchest.chest." + type.name().toLowerCase(Locale.US));
+        this.setTranslationKey("ironchest.chest." + type.name().toLowerCase(Locale.US));
         this.setCreativeTab(IronChestCreativeTabs.tabIronChests);
     }
 

@@ -66,7 +66,7 @@ public class BlockIronChest extends Block
         this.setRegistryName(new ResourceLocation(BlockNames.IRON_CHEST));
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT_PROP, IronChestType.IRON));
         this.setHardness(3.0F);
-        this.setUnlocalizedName("IronChest");
+        this.setTranslationKey("IronChest");
         this.setCreativeTab(IronChestCreativeTabs.tabIronChests);
     }
 

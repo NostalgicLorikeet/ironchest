@@ -1,0 +1,12 @@
+// Add any additional repositories for your dependencies here
+
+repositories {
+    flatDir {
+        name "fileRepo"
+        dirs "repo"
+    }
+	maven {
+        name 'DVS1 Maven FS'
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+}

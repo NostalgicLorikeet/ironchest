@@ -6,19 +6,12 @@
  ******************************************************************************/
 package cpw.mods.ironchest.common.items;
 
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.COPPER;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.CRYSTAL;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.DIAMOND;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.GOLD;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.IRON;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.OBSIDIAN;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.SILVER;
-import static cpw.mods.ironchest.common.blocks.chest.IronChestType.WOOD;
-
 import cpw.mods.ironchest.common.blocks.chest.IronChestType;
 import cpw.mods.ironchest.common.items.chest.ItemChestChanger;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
+
+import static cpw.mods.ironchest.common.blocks.chest.IronChestType.*;
 
 public enum ChestChangerType
 {
@@ -31,7 +24,10 @@ public enum ChestChangerType
     DIAMOND_CRYSTAL(DIAMOND, CRYSTAL, "diamond_crystal_chest_upgrade"),
     WOOD_IRON(WOOD, IRON, "wood_iron_chest_upgrade"),
     WOOD_COPPER(WOOD, COPPER, "wood_copper_chest_upgrade"),
-    DIAMOND_OBSIDIAN(DIAMOND, OBSIDIAN, "diamond_obsidian_chest_upgrade");
+    DIAMOND_OBSIDIAN(DIAMOND, OBSIDIAN, "diamond_obsidian_chest_upgrade"),
+    DIAMOND_NETHERITE(DIAMOND, NETHERITE, "diamond_netherite_chest_upgrade"),
+    OBSIDIAN_NETHERITE(OBSIDIAN, NETHERITE, "obsidian_netherite_chest_upgrade"),
+    CRYSTAL_NETHERITE(CRYSTAL, NETHERITE, "crystal_netherite_chest_upgrade");
     //@formatter:on
 
     public static final ChestChangerType[] VALUES = values();

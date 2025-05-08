@@ -441,7 +441,7 @@ public class TileEntityIronShulkerBox extends TileEntityLockableLoot implements 
     public AxisAlignedBB getBoundingBox(EnumFacing facing)
     {
         //@formatter:off
-        return Block.FULL_BLOCK_AABB.expand(0.5F * this.getProgress(1.0F) * facing.getFrontOffsetX(), 0.5F * this.getProgress(1.0F) * facing.getFrontOffsetY(), 0.5F * this.getProgress(1.0F) * facing.getFrontOffsetZ());
+        return Block.FULL_BLOCK_AABB.expand(0.5F * this.getProgress(1.0F) * facing.getXOffset(), 0.5F * this.getProgress(1.0F) * facing.getYOffset(), 0.5F * this.getProgress(1.0F) * facing.getZOffset());
         //@formatter:on
     }
 
@@ -449,7 +449,7 @@ public class TileEntityIronShulkerBox extends TileEntityLockableLoot implements 
     {
         EnumFacing enumfacing = facing.getOpposite();
 
-        return this.getBoundingBox(facing).contract(enumfacing.getFrontOffsetX(), enumfacing.getFrontOffsetY(), enumfacing.getFrontOffsetZ());
+        return this.getBoundingBox(facing).contract(enumfacing.getXOffset(), enumfacing.getYOffset(), enumfacing.getZOffset());
     }
 
     private void moveCollidedEntities()
@@ -518,7 +518,7 @@ public class TileEntityIronShulkerBox extends TileEntityLockableLoot implements 
                         }
 
                         //@formatter:off
-                        entity.move(MoverType.SHULKER_BOX, d0 * enumfacing.getFrontOffsetX(), d1 * enumfacing.getFrontOffsetY(), d2 * enumfacing.getFrontOffsetZ());
+                        entity.move(MoverType.SHULKER_BOX, d0 * enumfacing.getXOffset(), d1 * enumfacing.getYOffset(), d2 * enumfacing.getZOffset());
                         //@formatter:on
                     }
                 }

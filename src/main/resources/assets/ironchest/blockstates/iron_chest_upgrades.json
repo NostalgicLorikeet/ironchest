@@ -50,6 +50,21 @@
         "textures": {
           "layer0": "ironchest:items/chest/copper_iron_upgrade"
         }
+      },
+      "diamond_netherite_chest_upgrade": {
+        "textures": {
+          "layer0": "ironchest:items/chest/diamond_netherite_upgrade"
+        }
+      },
+      "obsidian_netherite_chest_upgrade": {
+        "textures": {
+          "layer0": "ironchest:items/chest/obsidian_netherite_upgrade"
+        }
+      },
+      "crystal_netherite_chest_upgrade": {
+        "textures": {
+          "layer0": "ironchest:items/chest/crystal_netherite_upgrade"
+        }
       }
     }
   }

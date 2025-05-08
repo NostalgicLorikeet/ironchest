@@ -11,13 +11,7 @@
 package cpw.mods.ironchest.common.blocks.shulker;
 
 import cpw.mods.ironchest.common.gui.shulker.slot.ValidatingShulkerBoxSlot;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityCopperShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityCrystalShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityDiamondShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityGoldShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityIronShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityObsidianShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntitySilverShulkerBox;
+import cpw.mods.ironchest.common.tileentity.shulker.*;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.EnumDyeColor;
@@ -33,6 +27,7 @@ public enum IronShulkerBoxType implements IStringSerializable
     SILVER(72, 9, false, "_silver.png", TileEntitySilverShulkerBox.class, 184, 238),
     CRYSTAL(108, 12, true, "_crystal.png", TileEntityCrystalShulkerBox.class, 238, 256),
     OBSIDIAN(108, 12, false, "_obsidian.png", TileEntityObsidianShulkerBox.class, 238, 256),
+    //NETHERITE(192,12,false,"_netherite.png",TileEntityNetheriteShulkerBox.class,238,382),
     VANILLA(0, 0, false, "", null, 0, 0);
     //@formatter:on
 
@@ -82,6 +77,10 @@ public enum IronShulkerBoxType implements IStringSerializable
         {
             switch (this)
             {
+            //case NETHERITE:
+            //{
+            //    this.breakTexture = "minecraft:blocks/obsidian";
+            //}
             case OBSIDIAN:
             {
                 this.breakTexture = "minecraft:blocks/obsidian";
@@ -145,6 +144,8 @@ public enum IronShulkerBoxType implements IStringSerializable
             return new TileEntityCrystalShulkerBox(colorIn);
         case OBSIDIAN:
             return new TileEntityObsidianShulkerBox(colorIn);
+        //case NETHERITE:
+        //    return new TileEntityNetheriteShulkerBox(colorIn);
         default:
             return null;
         }

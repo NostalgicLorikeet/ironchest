@@ -11,25 +11,13 @@
 package cpw.mods.ironchest;
 
 import cpw.mods.ironchest.common.CommonProxy;
+import cpw.mods.ironchest.common.NetheriteChestFireproofing;
 import cpw.mods.ironchest.common.config.Config;
 import cpw.mods.ironchest.common.lib.BlockLists;
 import cpw.mods.ironchest.common.network.MessageCrystalChestSync;
 import cpw.mods.ironchest.common.network.MessageCrystalShulkerSync;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityCopperChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityCrystalChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityDiamondChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityDirtChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityGoldChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityIronChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntityObsidianChest;
-import cpw.mods.ironchest.common.tileentity.chest.TileEntitySilverChest;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityCopperShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityCrystalShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityDiamondShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityGoldShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityIronShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntityObsidianShulkerBox;
-import cpw.mods.ironchest.common.tileentity.shulker.TileEntitySilverShulkerBox;
+import cpw.mods.ironchest.common.tileentity.chest.*;
+import cpw.mods.ironchest.common.tileentity.shulker.*;
 import cpw.mods.ironchest.common.util.MissingMappingsHandler;
 import cpw.mods.ironchest.common.util.OcelotsSitOnChestsHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -84,6 +72,8 @@ public class IronChest
         MinecraftForge.EVENT_BUS.register(new OcelotsSitOnChestsHandler());
 
         MinecraftForge.EVENT_BUS.register(new MissingMappingsHandler());
+
+        MinecraftForge.EVENT_BUS.register(new NetheriteChestFireproofing());
     }
 
     @EventHandler
@@ -110,6 +100,7 @@ public class IronChest
         TileEntityCopperChest.registerFixesChest(dataFixer);
         TileEntityObsidianChest.registerFixesChest(dataFixer);
         TileEntityDirtChest.registerFixesChest(dataFixer);
+        TileEntityNetheriteChest.registerFixesChest(dataFixer);
 
         TileEntityIronShulkerBox.registerFixesShulkerBox(dataFixer);
         TileEntityGoldShulkerBox.registerFixesShulkerBox(dataFixer);

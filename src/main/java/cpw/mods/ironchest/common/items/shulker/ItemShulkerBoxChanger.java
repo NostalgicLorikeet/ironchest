@@ -43,7 +43,7 @@ public class ItemShulkerBoxChanger extends ItemTooltip
         this.type = type;
 
         this.setMaxStackSize(1);
-        this.setUnlocalizedName("ironchest.shulker_box." + type.name().toLowerCase(Locale.US));
+        this.setTranslationKey("ironchest.shulker_box." + type.name().toLowerCase(Locale.US));
         this.setCreativeTab(IronChestCreativeTabs.tabIronChests);
     }
 

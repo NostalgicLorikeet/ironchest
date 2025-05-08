@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " M ",
+    "MSM",
+    " M "
+  ],
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNetherite"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    }
+  },
+  "result": {
+    "item": "ironchest:crystal_netherite_chest_upgrade",
+  }
+}
