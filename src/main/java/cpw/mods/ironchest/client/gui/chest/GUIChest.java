@@ -11,6 +11,7 @@
 package cpw.mods.ironchest.client.gui.chest;
 
 import cpw.mods.ironchest.common.blocks.chest.IronChestType;
+import cpw.mods.ironchest.common.config.Config;
 import cpw.mods.ironchest.common.gui.chest.ContainerIronChest;
 import cpw.mods.ironchest.common.tileentity.chest.TileEntityIronChest;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -24,19 +25,23 @@ public class GUIChest extends GuiContainer
     public enum ResourceList
     {
         //@formatter:off
-        IRON(new ResourceLocation("ironchest", "textures/gui/iron_container.png")),
-        COPPER(new ResourceLocation("ironchest", "textures/gui/copper_container.png")),
-        SILVER(new ResourceLocation("ironchest", "textures/gui/silver_container.png")),
-        GOLD(new ResourceLocation("ironchest", "textures/gui/gold_container.png")),
-        DIAMOND(new ResourceLocation("ironchest", "textures/gui/diamond_container.png")),
-        DIRT(new ResourceLocation("ironchest", "textures/gui/dirt_container.png")),
-        NETHERITE(new ResourceLocation("ironchest", "textures/gui/netherite_container.png")); //CHANGE
+        IRON("iron_container.png"),
+        COPPER("copper_container.png"),
+        SILVER("silver_container.png"),
+        GOLD("gold_container.png"),
+        DIAMOND("diamond_container.png"),
+        DIRT("dirt_container.png"),
+        NETHERITE("netherite_container.png");
         //@formatter:on
         public final ResourceLocation location;
 
-        ResourceList(ResourceLocation loc)
+        ResourceList(String loc)
         {
-            this.location = loc;
+            if (Config.coloredGuis) {
+                this.location = new ResourceLocation("ironchest","textures/gui/colored/" + loc);
+            } else {
+                this.location = new ResourceLocation("ironchest", "textures/gui/" + loc);
+            }
         }
     }
 
