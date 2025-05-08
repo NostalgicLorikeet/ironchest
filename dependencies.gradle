@@ -39,4 +39,6 @@
  */
 dependencies {
 	runtimeOnly rfg.deobf("mezz.jei:jei_1.12.2:4.10.+")
+	devOnlyNonPublishable rfg.deobf("curse.maven:future-mc-310059:6162819")
+	devOnlyNonPublishable rfg.deobf("curse.maven:shadowfacts-forgelin-248453:2785465")
 }

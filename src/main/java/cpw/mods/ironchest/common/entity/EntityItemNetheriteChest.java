@@ -184,7 +184,7 @@ public class EntityItemNetheriteChest extends EntityItem {
         return this.isInsideOfMaterial(Material.LAVA);
     }
 
-    private void searchForOtherItemsNearby() {
+    public void searchForOtherItemsNearby() {
         for (EntityItemNetheriteChest entityitem : this.world.getEntitiesWithinAABB(EntityItemNetheriteChest.class, this.getEntityBoundingBox().grow(0.5D, 0.0D, 0.5D))) {
             this.combineItems(entityitem);
         }

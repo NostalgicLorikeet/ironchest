@@ -25,20 +25,21 @@ public class GUIChest extends GuiContainer
     public enum ResourceList
     {
         //@formatter:off
-        IRON("iron_container.png"),
-        COPPER("copper_container.png"),
-        SILVER("silver_container.png"),
-        GOLD("gold_container.png"),
-        DIAMOND("diamond_container.png"),
-        DIRT("dirt_container.png"),
-        NETHERITE("netherite_container.png");
+        IRON("iron_container.png", "iron_container.png"),
+        COPPER("copper_container.png", "copper_container.png"),
+        SILVER("silver_container.png", "silver_container.png"),
+        GOLD("gold_container.png", "gold_container.png"),
+        DIAMOND("diamond_container.png", "diamond_container.png"),
+        OBSIDIAN("diamond_container.png", "obsidian_container.png"),
+        CRYSTAL("diamond_container.png", "crystal_container.png"),
+        DIRT("dirt_container.png", "dirt_container.png"),
+        NETHERITE("netherite_container.png", "netherite_container.png");
         //@formatter:on
         public final ResourceLocation location;
 
-        ResourceList(String loc)
-        {
+        ResourceList(String loc, String cloc) {
             if (Config.coloredGuis) {
-                this.location = new ResourceLocation("ironchest","textures/gui/colored/" + loc);
+                this.location = new ResourceLocation("ironchest", "textures/gui/colored/" + cloc);
             } else {
                 this.location = new ResourceLocation("ironchest", "textures/gui/" + loc);
             }
@@ -53,8 +54,8 @@ public class GUIChest extends GuiContainer
         DIAMOND(238, 256, ResourceList.DIAMOND, IronChestType.DIAMOND),
         COPPER(184, 184, ResourceList.COPPER, IronChestType.COPPER),
         SILVER(184, 238, ResourceList.SILVER, IronChestType.SILVER),
-        CRYSTAL(238, 256, ResourceList.DIAMOND, IronChestType.CRYSTAL),
-        OBSIDIAN(238, 256, ResourceList.DIAMOND,IronChestType.OBSIDIAN),
+        CRYSTAL(238, 256, ResourceList.CRYSTAL, IronChestType.CRYSTAL),
+        OBSIDIAN(238, 256, ResourceList.OBSIDIAN,IronChestType.OBSIDIAN),
         DIRTCHEST9000(184, 184, ResourceList.DIRT, IronChestType.DIRTCHEST9000),
         WOOD(0, 0, null, null),
         NETHERITE(238, 382, ResourceList.NETHERITE, IronChestType.NETHERITE);
