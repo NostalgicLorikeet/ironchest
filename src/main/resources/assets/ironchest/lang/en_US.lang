@@ -156,7 +156,7 @@ tile.ironchest.shulker_box.obsidian.red.name=Red Obsidian Shulker Box
 tile.ironchest.shulker_box.obsidian.black.name=Black Obsidian Shulker Box
 
 item.ironchest.shulker_box.iron_gold.name=Iron to Gold Shulker Box Upgrade
-item.ironchest.shulker_box.iron_gold.tooltip=Used to upgrade a Iron Shulker Box to a Gold Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.iron_gold.tooltip=Used to upgrade an Iron Shulker Box to a Gold Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.gold_diamond.name=Gold to Diamond Shulker Box Upgrade
 item.ironchest.shulker_box.gold_diamond.tooltip=Used to upgrade a Gold Shulker Box to a Diamond Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.copper_silver.name=Copper to Silver Shulker Box Upgrade
@@ -164,15 +164,38 @@ item.ironchest.shulker_box.copper_silver.tooltip=Used to upgrade a Copper Shulke
 item.ironchest.shulker_box.silver_gold.name=Silver to Gold Shulker Box Upgrade
 item.ironchest.shulker_box.silver_gold.tooltip=Used to upgrade a Silver Shulker Box to a Gold Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.copper_iron.name=Copper to Iron Shulker Box Upgrade
-item.ironchest.shulker_box.copper_iron.tooltip=Used to upgrade a Copper Shulker Box to a Iron Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.copper_iron.tooltip=Used to upgrade a Copper Shulker Box to an Iron Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.diamond_crystal.name=Diamond to Crystal Shulker Box Upgrade
 item.ironchest.shulker_box.diamond_crystal.tooltip=Used to upgrade a Diamond Shulker Box to a Crystal Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.vanilla_iron.name=Vanilla to Iron Shulker Box Upgrade
-item.ironchest.shulker_box.vanilla_iron.tooltip=Used to upgrade a Vanilla Shulker Box to a Iron Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.vanilla_iron.tooltip=Used to upgrade a Vanilla Shulker Box to an Iron Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.vanilla_copper.name=Vanilla to Copper Shulker Box Upgrade
 item.ironchest.shulker_box.vanilla_copper.tooltip=Used to upgrade a Vanilla Shulker Box to a Copper Shulker Box\nThe color of the Shulker Box will stay the same.
 item.ironchest.shulker_box.diamond_obsidian.name=Diamond to Obsidian Shulker Box Upgrade
-item.ironchest.shulker_box.diamond_obsidian.tooltip=Used to upgrade a Diamond Shulker Box to a Obsidian Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.diamond_obsidian.tooltip=Used to upgrade a Diamond Shulker Box to an Obsidian Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.diamond_netherite.name=Diamond to Netherite Shulker Box Upgrade
+item.ironchest.shulker_box.diamond_netherite.tooltip=Used to upgrade a Diamond Shulker Box to a Netherite Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.crystal_netherite.name=Crystal to Netherite Shulker Box Upgrade
+item.ironchest.shulker_box.crystal_netherite.tooltip=Used to upgrade a Crystal Shulker Box to a Netherite Shulker Box\nThe color of the Shulker Box will stay the same.
+item.ironchest.shulker_box.obsidian_netherite.name=Obsidian to Netherite Shulker Box Upgrade
+item.ironchest.shulker_box.obsidian_netherite.tooltip=Used to upgrade an Obsidian Shulker Box to a Netherite Shulker Box\nThe color of the Shulker Box will stay the same.
+
+tile.ironchest.shulker_box.netherite.white.name=White Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.orange.name=Orange Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.magenta.name=Magenta Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.light_blue.name=Light Blue Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.yellow.name=Yellow Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.lime.name=Lime Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.pink.name=Pink Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.gray.name=Gray Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.silver.name=Light Gray Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.cyan.name=Cyan Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.purple.name=Purple Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.blue.name=Blue Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.brown.name=Brown Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.green.name=Green Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.red.name=Red Netherite Shulker Box
+tile.ironchest.shulker_box.netherite.black.name=Black Netherite Shulker Box
 
 ##############
 #    GUIs    #

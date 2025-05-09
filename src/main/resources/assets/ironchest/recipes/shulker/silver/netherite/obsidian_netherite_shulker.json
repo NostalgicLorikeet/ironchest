@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "ironchest:is_option_enabled",
+      "config_setting": "enableShulkerBoxRecipes"
+    }
+  ],
+  "type": "forge:ore_shaped",
+  "pattern": [
+    " M ",
+    "MSM",
+    " M "
+  ],
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNetherite"
+    },
+    "S": {
+      "item": "ironchest:iron_shulker_box_silver",
+      "data": 6
+    }
+  },
+  "result": {
+    "item": "ironchest:iron_shulker_box_silver",
+    "data": 7
+  }
+}

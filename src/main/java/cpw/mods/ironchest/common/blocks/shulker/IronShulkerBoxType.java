@@ -27,8 +27,9 @@ public enum IronShulkerBoxType implements IStringSerializable
     SILVER(72, 9, false, "_silver.png", TileEntitySilverShulkerBox.class, 184, 238),
     CRYSTAL(108, 12, true, "_crystal.png", TileEntityCrystalShulkerBox.class, 238, 256),
     OBSIDIAN(108, 12, false, "_obsidian.png", TileEntityObsidianShulkerBox.class, 238, 256),
-    //NETHERITE(192,12,false,"_netherite.png",TileEntityNetheriteShulkerBox.class,238,382),
+    NETHERITE(192,12,false,"_netherite.png",TileEntityNetheriteShulkerBox.class,238,382),
     VANILLA(0, 0, false, "", null, 0, 0);
+
     //@formatter:on
 
     public static final IronShulkerBoxType VALUES[] = values();
@@ -77,10 +78,10 @@ public enum IronShulkerBoxType implements IStringSerializable
         {
             switch (this)
             {
-            //case NETHERITE:
-            //{
-            //    this.breakTexture = "minecraft:blocks/obsidian";
-            //}
+            case NETHERITE:
+            {
+                this.breakTexture = "minecraft:blocks/obsidian";
+            }
             case OBSIDIAN:
             {
                 this.breakTexture = "minecraft:blocks/obsidian";
@@ -144,8 +145,8 @@ public enum IronShulkerBoxType implements IStringSerializable
             return new TileEntityCrystalShulkerBox(colorIn);
         case OBSIDIAN:
             return new TileEntityObsidianShulkerBox(colorIn);
-        //case NETHERITE:
-        //    return new TileEntityNetheriteShulkerBox(colorIn);
+        case NETHERITE:
+            return new TileEntityNetheriteShulkerBox(colorIn);
         default:
             return null;
         }

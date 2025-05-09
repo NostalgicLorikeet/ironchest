@@ -6,6 +6,7 @@
  ******************************************************************************/
 package cpw.mods.ironchest.common.items;
 
+import static cpw.mods.ironchest.common.blocks.chest.IronChestType.NETHERITE;
 import static cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType.COPPER;
 import static cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType.CRYSTAL;
 import static cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType.DIAMOND;
@@ -15,6 +16,7 @@ import static cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType.OBSIDI
 import static cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType.SILVER;
 import static cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType.VANILLA;
 
+import cpw.mods.ironchest.common.blocks.chest.IronChestType;
 import cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType;
 import cpw.mods.ironchest.common.items.shulker.ItemShulkerBoxChanger;
 import net.minecraft.item.Item;
@@ -31,7 +33,10 @@ public enum ShulkerBoxChangerType
     DIAMOND_CRYSTAL(DIAMOND, CRYSTAL, "diamond_crystal_shulker_upgrade"),
     VANILLA_IRON(VANILLA, IRON, "vanilla_iron_shulker_upgrade"),
     VANILLA_COPPER(VANILLA, COPPER, "vanilla_copper_shulker_upgrade"),
-    DIAMOND_OBSIDIAN(DIAMOND, OBSIDIAN, "diamond_obsidian_shulker_upgrade");
+    DIAMOND_OBSIDIAN(DIAMOND, OBSIDIAN, "diamond_obsidian_shulker_upgrade"),
+    DIAMOND_NETHERITE(DIAMOND, IronShulkerBoxType.NETHERITE, "diamond_netherite_shulker_upgrade"),
+    OBSIDIAN_NETHERITE(OBSIDIAN, IronShulkerBoxType.NETHERITE, "obsidian_netherite_shulker_upgrade"),
+    CRYSTAL_NETHERITE(CRYSTAL, IronShulkerBoxType.NETHERITE, "crystal_netherite_shulker_upgrade");
     //@formatter:on
 
     public static final ShulkerBoxChangerType[] VALUES = values();

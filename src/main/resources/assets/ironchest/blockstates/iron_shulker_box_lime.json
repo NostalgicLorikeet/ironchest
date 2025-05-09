@@ -53,6 +53,12 @@
                "particle":"minecraft:blocks/shulker_top_lime",
                "texture":"minecraft:entity/shulker/shulker_lime"
             }
+         },
+         "netherite":{
+            "textures":{
+               "particle":"futuremc:block/netherite_block",
+               "texture":"ironchest:model/shulker/lime/shulker_lime_netherite"
+            }
          }
       }
    }

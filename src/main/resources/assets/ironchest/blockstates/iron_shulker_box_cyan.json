@@ -53,6 +53,12 @@
                "particle":"minecraft:blocks/shulker_top_cyan",
                "texture":"minecraft:entity/shulker/shulker_cyan"
             }
+         },
+         "netherite":{
+            "textures":{
+               "particle":"futuremc:block/netherite_block",
+               "texture":"ironchest:model/shulker/cyan/shulker_cyan_netherite"
+            }
          }
       }
    }

@@ -50,6 +50,21 @@
             "textures":{  
                "layer0":"ironchest:items/shulker/copper_iron_upgrade"
             }
+         },
+         "diamond_netherite_shulker_upgrade":{
+            "textures":{
+               "layer0":"ironchest:items/shulker/diamond_netherite_upgrade"
+            }
+         },
+         "obsidian_netherite_shulker_upgrade":{
+            "textures":{
+               "layer0":"ironchest:items/shulker/obsidian_netherite_upgrade"
+            }
+         },
+         "crystal_netherite_shulker_upgrade":{
+            "textures":{
+               "layer0":"ironchest:items/shulker/crystal_netherite_upgrade"
+            }
          }
       }
    }

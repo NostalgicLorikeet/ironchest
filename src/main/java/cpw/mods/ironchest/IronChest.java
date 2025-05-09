@@ -109,5 +109,6 @@ public class IronChest
         TileEntitySilverShulkerBox.registerFixesShulkerBox(dataFixer);
         TileEntityCopperShulkerBox.registerFixesShulkerBox(dataFixer);
         TileEntityObsidianShulkerBox.registerFixesShulkerBox(dataFixer);
+        TileEntityNetheriteShulkerBox.registerFixesShulkerBox(dataFixer);
     }
 }

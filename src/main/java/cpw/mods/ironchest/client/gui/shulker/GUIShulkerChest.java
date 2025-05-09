@@ -10,7 +10,10 @@
  ******************************************************************************/
 package cpw.mods.ironchest.client.gui.shulker;
 
+import cpw.mods.ironchest.client.gui.chest.GUIChest;
+import cpw.mods.ironchest.common.blocks.chest.IronChestType;
 import cpw.mods.ironchest.common.blocks.shulker.IronShulkerBoxType;
+import cpw.mods.ironchest.common.config.Config;
 import cpw.mods.ironchest.common.gui.shulker.ContainerIronShulkerBox;
 import cpw.mods.ironchest.common.tileentity.shulker.TileEntityIronShulkerBox;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -24,18 +27,23 @@ public class GUIShulkerChest extends GuiContainer
     public enum ResourceList
     {
         //@formatter:off
-        IRON(new ResourceLocation("ironchest", "textures/gui/iron_container.png")),
-        COPPER(new ResourceLocation("ironchest", "textures/gui/copper_container.png")),
-        SILVER(new ResourceLocation("ironchest", "textures/gui/silver_container.png")),
-        GOLD(new ResourceLocation("ironchest", "textures/gui/gold_container.png")),
-        DIAMOND(new ResourceLocation("ironchest", "textures/gui/diamond_container.png"));
+        IRON("iron_container.png", "iron_container.png"),
+        COPPER("copper_container.png", "copper_container.png"),
+        SILVER("silver_container.png", "silver_container.png"),
+        GOLD("gold_container.png", "gold_container.png"),
+        DIAMOND("diamond_container.png", "diamond_container.png"),
+        OBSIDIAN("diamond_container.png", "obsidian_container.png"),
+        CRYSTAL("diamond_container.png", "crystal_container.png"),
+        NETHERITE("netherite_container.png", "netherite_container.png");
         //@formatter:on
-
         public final ResourceLocation location;
 
-        ResourceList(ResourceLocation loc)
-        {
-            this.location = loc;
+        ResourceList(String loc, String cloc) {
+            if (Config.coloredGuis) {
+                this.location = new ResourceLocation("ironchest", "textures/gui/colored/" + cloc);
+            } else {
+                this.location = new ResourceLocation("ironchest", "textures/gui/" + loc);
+            }
         }
     }
 
@@ -47,8 +55,9 @@ public class GUIShulkerChest extends GuiContainer
         DIAMOND(238, 256, ResourceList.DIAMOND, IronShulkerBoxType.DIAMOND),
         COPPER(184, 184, ResourceList.COPPER, IronShulkerBoxType.COPPER),
         SILVER(184, 238, ResourceList.SILVER, IronShulkerBoxType.SILVER),
-        CRYSTAL(238, 256, ResourceList.DIAMOND, IronShulkerBoxType.CRYSTAL),
-        OBSIDIAN(238, 256, ResourceList.DIAMOND,IronShulkerBoxType.OBSIDIAN);
+        CRYSTAL(238, 256, ResourceList.CRYSTAL, IronShulkerBoxType.CRYSTAL),
+        OBSIDIAN(238, 256, ResourceList.OBSIDIAN, IronShulkerBoxType.OBSIDIAN),
+        NETHERITE(238, 382, ResourceList.NETHERITE, IronShulkerBoxType.NETHERITE);
         //@formatter:on
 
         private int xSize;
@@ -114,6 +123,10 @@ public class GUIShulkerChest extends GuiContainer
         int x = (this.width - this.xSize) / 2;
         int y = (this.height - this.ySize) / 2;
 
-        this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
+        if (this.type != GUI.NETHERITE) {
+            this.drawTexturedModalRect(x, y,0, 0, this.xSize, this.ySize);
+        } else {
+            this.drawModalRectWithCustomSizedTexture(x, y, 0, 0, this.xSize, this.ySize, 256, 382);
+        }
     }
 }
