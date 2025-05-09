@@ -89,5 +89,40 @@
             "type": "forge:ore_dict",
             "ore": "chestWood"
         }
+    },
+    {
+        "name": "BLOCKCOPPER",
+        "ingredient": {
+            "type": "forge:ore_dict",
+            "ore": "blockCopper"
+        }
+    },
+    {
+        "name": "BLOCKDIAMOND",
+        "ingredient": {
+            "type": "forge:ore_dict",
+            "ore": "blockDiamond"
+        }
+    },
+    {
+        "name": "BLOCKGOLD",
+        "ingredient": {
+            "type": "forge:ore_dict",
+            "ore": "blockGold"
+        }
+    },
+    {
+        "name": "BLOCKIRON",
+        "ingredient": {
+            "type": "forge:ore_dict",
+            "ore": "blockIron"
+        }
+    },
+    {
+        "name": "BLOCKSILVER",
+        "ingredient": {
+            "type": "forge:ore_dict",
+            "ore": "blockSilver"
+        }
     }
 ]

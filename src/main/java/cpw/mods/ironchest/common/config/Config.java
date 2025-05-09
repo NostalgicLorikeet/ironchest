@@ -31,6 +31,7 @@ public final class Config
     {
         enableShulkerBoxRecipes = configFile.get(ENABLE_DISABLE, "Enable Shulker Box Recipes", enableShulkerBoxRecipes).getBoolean(enableShulkerBoxRecipes);
         addShulkerBoxesToCreative = configFile.get(ENABLE_DISABLE, "Add Shulker Boxes to Creative Menu", addShulkerBoxesToCreative).getBoolean(addShulkerBoxesToCreative);
+        rebalanceShulkers = configFile.get(ENABLE_DISABLE, "Rebalanced Shulker Box recipes", rebalanceShulkers).getBoolean(rebalanceShulkers);
         coloredGuis = configFile.get(ENABLE_DISABLE, "Use different colored GUIs for each container", coloredGuis).getBoolean(coloredGuis);
 
         // save changes if any
@@ -48,6 +49,7 @@ public final class Config
     //@formatter:off
     public static boolean enableShulkerBoxRecipes = true;
     public static boolean addShulkerBoxesToCreative = true;
+    public static boolean rebalanceShulkers = false;
     public static boolean coloredGuis = false;
 
     static Configuration configFile;

@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "ironchest:is_option_enabled",
+      "config_setting": "enableShulkerBoxRecipes"}, {"type": "ironchest:is_option_enabled","config_setting": "rebalanceShulkers"
+    }
+  ],
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "MMM",
+    "MSM",
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNetherite"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    }
+  },
+  "result": {
+    "item": "ironchest:crystal_netherite_shulker_upgrade"
+  }
+}

@@ -20,6 +20,10 @@ public class IsConfigOptionEnabledConditionFactory implements IConditionFactory
         {
         case "enableShulkerBoxRecipes":
             return () -> Config.enableShulkerBoxRecipes;
+        case "rebalanceShulkers":
+            return () -> Config.rebalanceShulkers;
+        case "noRebalanceShulkers":
+            return () -> !Config.rebalanceShulkers;
         default:
             throw new RuntimeException(String.format("Invalid config setting: %s", configSetting));
         }

@@ -2,7 +2,7 @@
 {
   "modid": "ironchest",
   "name": "Iron Chest",
-  "description": "New chests with larger sizes, with in-place upgrade items.\nThe feature chest is the crystal chest, which is transparent - some inventory contents are visible without opening the chest",
+  "description": "New chests with larger sizes, with in-place upgrade items.\nThe feature chest is the crystal chest, which is transparent - some inventory contents are visible without opening the chest\nFork adding a Netherite Chest",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://www.curseforge.com/minecraft/mc-mods/iron-chests-with-netherite-chest",

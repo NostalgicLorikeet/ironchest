@@ -1,0 +1,28 @@
+{
+    "conditions": [
+        {
+            "type": "ironchest:is_option_enabled",
+            "config_setting": "enableShulkerBoxRecipes"}, {"type": "ironchest:is_option_enabled","config_setting": "rebalanceShulkers"
+        }
+    ],
+    "type": "forge:ore_shaped",
+    "pattern": [
+        "GMG",
+        "GSG",
+        "GMG"
+    ],
+    "key": {
+        "M": {
+            "item": "#BLOCKDIAMOND"
+        },
+        "S": {
+            "item": "#BLOCKGOLD"
+        },
+        "G": {
+            "item": "#GLASS"
+        }
+    },
+    "result": {
+        "item": "ironchest:gold_diamond_shulker_upgrade"
+    }
+}
