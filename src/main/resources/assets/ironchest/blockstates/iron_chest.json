@@ -62,7 +62,7 @@
       },
       "netherite": {
         "textures": {
-          "particle": "futuremc:block/netherite_block",
+          "particle": "ironchest:blocks/netherite_block",
           "texture": "ironchest:model/chest/netherite_chest"
         }
       }
