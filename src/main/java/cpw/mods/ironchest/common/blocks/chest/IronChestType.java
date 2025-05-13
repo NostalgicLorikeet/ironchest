@@ -33,7 +33,7 @@ public enum IronChestType implements IStringSerializable
     OBSIDIAN(108, 12, false, "obsidian_chest.png", TileEntityObsidianChest.class, 238, 256),
     DIRTCHEST9000(1, 1, false, "dirt_chest.png", TileEntityDirtChest.class, 184, 184),
     WOOD(0, 0, false, "", null, 0, 0),
-    NETHERITE(192,12,false,"netherite_chest.png",TileEntityNetheriteChest.class,238,382);
+    NETHERITE(192,24,false,"netherite_chest.png",TileEntityNetheriteChest.class,454,238);
     //@formatter:on
 
     public static final IronChestType VALUES[] = values();

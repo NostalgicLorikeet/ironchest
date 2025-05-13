@@ -27,7 +27,7 @@ public enum IronShulkerBoxType implements IStringSerializable
     SILVER(72, 9, false, "_silver.png", TileEntitySilverShulkerBox.class, 184, 238),
     CRYSTAL(108, 12, true, "_crystal.png", TileEntityCrystalShulkerBox.class, 238, 256),
     OBSIDIAN(108, 12, false, "_obsidian.png", TileEntityObsidianShulkerBox.class, 238, 256),
-    NETHERITE(192,12,false,"_netherite.png",TileEntityNetheriteShulkerBox.class,238,382),
+    NETHERITE(192,24,false,"_netherite.png",TileEntityNetheriteShulkerBox.class,454,238),
     VANILLA(0, 0, false, "", null, 0, 0);
 
     //@formatter:on

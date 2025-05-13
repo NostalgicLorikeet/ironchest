@@ -57,7 +57,7 @@ public class GUIShulkerChest extends GuiContainer
         SILVER(184, 238, ResourceList.SILVER, IronShulkerBoxType.SILVER),
         CRYSTAL(238, 256, ResourceList.CRYSTAL, IronShulkerBoxType.CRYSTAL),
         OBSIDIAN(238, 256, ResourceList.OBSIDIAN, IronShulkerBoxType.OBSIDIAN),
-        NETHERITE(238, 382, ResourceList.NETHERITE, IronShulkerBoxType.NETHERITE);
+        NETHERITE(454, 238, ResourceList.NETHERITE, IronShulkerBoxType.NETHERITE);
         //@formatter:on
 
         private int xSize;
@@ -126,7 +126,7 @@ public class GUIShulkerChest extends GuiContainer
         if (this.type != GUI.NETHERITE) {
             this.drawTexturedModalRect(x, y,0, 0, this.xSize, this.ySize);
         } else {
-            this.drawModalRectWithCustomSizedTexture(x, y, 0, 0, this.xSize, this.ySize, 256, 382);
+            this.drawModalRectWithCustomSizedTexture(x, y, 0, 0, this.xSize, this.ySize, 454, 256);
         }
     }
 }

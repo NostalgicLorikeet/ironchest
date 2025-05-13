@@ -58,7 +58,7 @@ public class GUIChest extends GuiContainer
         OBSIDIAN(238, 256, ResourceList.OBSIDIAN,IronChestType.OBSIDIAN),
         DIRTCHEST9000(184, 184, ResourceList.DIRT, IronChestType.DIRTCHEST9000),
         WOOD(0, 0, null, null),
-        NETHERITE(238, 382, ResourceList.NETHERITE, IronChestType.NETHERITE);
+        NETHERITE(454, 238, ResourceList.NETHERITE, IronChestType.NETHERITE);
         //@formatter:on
 
         private int xSize;
@@ -126,7 +126,7 @@ public class GUIChest extends GuiContainer
         if (this.type != GUI.NETHERITE) {
             this.drawTexturedModalRect(x, y,0, 0, this.xSize, this.ySize);
         } else {
-            this.drawModalRectWithCustomSizedTexture(x, y, 0, 0, this.xSize, this.ySize, 256, 382);
+            this.drawModalRectWithCustomSizedTexture(x, y, 0, 0, this.xSize, this.ySize, 454, 256);
         }
     }
 }
