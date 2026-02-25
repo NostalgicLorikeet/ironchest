@@ -127,7 +127,7 @@ public enum IronChestType implements IStringSerializable
 
     public boolean isExplosionResistant()
     {
-        return this == OBSIDIAN;
+        return this == OBSIDIAN || this == NETHERITE;
     }
 
     public Slot makeSlot(IInventory chestInventory, int index, int x, int y)
