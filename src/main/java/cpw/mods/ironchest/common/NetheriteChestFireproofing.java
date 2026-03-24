@@ -13,10 +13,9 @@ public class NetheriteChestFireproofing {
     //Mostly derived from https://github.com/Jboymercs/nether_backport/blob/20b89ea14bd43c244c63675b028b8a7cdb887cfa/src/main/java/com/unseen/nb/common/EntityEvents.java
     @SubscribeEvent
     public void joinWorld(EntityJoinWorldEvent event) {
-        if(event.getEntity().getClass() == EntityItem.class) {
+        if(event.getEntity() instanceof EntityItem) {
             World world = event.getWorld();
-
-            EntityItem entityItem = (EntityItem)event.getEntity();
+            EntityItem entityItem = (EntityItem) event.getEntity();
             ItemStack item = entityItem.getItem();
 
             if (item.getItem() == ForgeRegistries.ITEMS.getValue(new ResourceLocation("ironchest:iron_chest")) && item.getItemDamage() == 9) {
